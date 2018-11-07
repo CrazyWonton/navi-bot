@@ -8,3 +8,5 @@ ROS package
   Use the online tool to generate the files for pocketsphinx
   Robot repeats current command with sound_play
   User confirms command with "Yes" or "No"
+
+https://github.com/gorinars/ros_voice_control
