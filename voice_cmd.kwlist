@@ -1,0 +1,7 @@
+BACK /1e-5/
+FORWARD /1e-5/
+LEFT /1e-5/
+RIGHT /1e-5/
+STOP /1e-5/
+YES /1e-5/
+NO /1e-5/
