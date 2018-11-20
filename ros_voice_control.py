@@ -50,6 +50,8 @@ class ASRControl(object):
 
 		self.state = 1
 		self.action = 5
+		self.oldState = 1
+		self.oldAction = 5
 
 		# you may need to change publisher destination depending on what you run
 		self.pub_ = rospy.Publisher(pub, Twist, queue_size=10)
@@ -79,8 +81,10 @@ class ASRControl(object):
 		"""
 		move the robot based on ASR hypothesis
 		"""
-
-		print "STATE = " + repr(self.state) + "  ACTION = " + repr(self.action)
+		if self.state != self.oldState or self.action != self.oldAction:
+			self.oldState = self.state
+			self.oldAction = self.action
+			print "STATE = " + repr(self.state) + "  ACTION = " + repr(self.action)
 
 		if self.decoder.hyp() != None:
 			print ([(seg.word, seg.prob, seg.start_frame, seg.end_frame)
