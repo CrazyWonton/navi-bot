@@ -41,7 +41,7 @@ class ASRControl(object):
 
 	def __init__(self, model, lexicon, kwlist, pub):
 		# initialize ROS
-		self.speed = 0.2
+		self.speed = 0.1
 		self.msg = Twist()
 
 		rospy.init_node('voice_cmd_vel')
